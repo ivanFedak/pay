@@ -1,0 +1,98 @@
+.header
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 50
+    &__container
+    &__body
+        padding: 30px 0
+        display: flex
+        align-items: center
+    &__logo
+        flex: 0 1 10%
+        padding-right: 15px
+    &__menu
+        flex: 0 1 70%
+        display: flex
+        justify-content: center
+    &__btns
+        flex: 0 1 20%
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        padding-left: 15px
+        @media (max-width: $md4 + px)//Less 479
+            flex-wrap: wrap
+            flex-direction: column
+    &__btn
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        text-align: center
+        min-width: 130px
+        padding: 16px 32px 
+        background: #9166F0
+        box-shadow: 0px 15px 25px rgba(115, 82, 208, 0.3)
+        border-radius: 10px
+        transition: all 0.3s ease 0s
+        
+        font-family: Circular Std Medium, sans-serif
+        font-size: 18px
+        line-height: 127%
+        text-align: center
+        color: #FFFFFF
+
+        &:not(:last-child)
+            margin-right: 10px
+        @media (max-width: $md3 + px) //Less 768
+            min-width: 97px
+            padding: 8px 13px 
+        @media (max-width: $md4 + px)//Less 479
+           &:not(:last-child)
+               margin: 0 0 10px 0
+
+
+.menu 
+    &__icon
+        display: none
+    &__body
+        @media (max-width: $md2 + px)//Less 992
+           position: fixed
+           z-index: 30  
+           left: -100%
+           top: 0
+           width: 100%
+           height: 100%
+           background: #d2d2d2a8
+           padding-top: 100px
+           overflow: auto
+    &__list
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        @include adaptiv-value('margin-left', -40, -1, 1)
+        @include adaptiv-value('margin-right', -40, -1, 1)
+        @media (max-width: $md2 + px)//Less 992
+           flex-direction: column
+           align-items: center
+           
+    &__item
+        padding: 0 40px
+        @include adaptiv-value('padding-left', 40, 1, 1)
+        @include adaptiv-value('padding-right', 40, 1, 1)
+        @media (max-width: $md2 + px)//Less 992
+           &:not(:last-child)
+               @include adaptiv-value('margin-bottom', 25, 20, 1)
+    &__link
+        font-family: Circular Std Book, sans-serif
+        font-size: 18px
+        line-height: 207%
+        @media (max-width: $md2 + px)//Less 992
+            font-family: Circular Std Bold, sans-serif 
+            color: #ffffff
+            font-size: 25px
+            background: #9166F0
+            padding: 10px
+            border-radius: 5px

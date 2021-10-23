@@ -1,0 +1,46 @@
+.features
+    @include adaptiv-value('padding-top', 70, 35, 1)
+    @include adaptiv-value('padding-bottom', 70, 35, 1)
+    &__container
+    &__title
+    &__descr
+    &__body
+        @include adaptiv-value('padding-top', 55, 30, 1)
+        display: grid
+        grid-gap: 30px
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))
+    &__item
+        @include adaptiv-value('padding-top', 55, 30, 1) 
+        @include adaptiv-value('padding-bottom', 55, 30, 1) 
+        @include adaptiv-value('padding-left', 40, 20, 1) 
+        @include adaptiv-value('padding-right', 40, 20, 1) 
+
+        display: flex
+        align-items: center
+        flex-direction: column
+        justify-content: center
+
+        transition: all 0.3s ease 0s
+        cursor: pointer
+        &:nth-child(1)
+            background: rgba(254, 108, 157, 0.1)
+        &:nth-child(2)
+            background: rgba(145, 102, 240, 0.1)
+        &:nth-child(3)
+            background: rgba(255, 154, 62, 0.1)
+        &:nth-child(4)
+            background: rgba(44, 173, 90, 0.1)
+        @media (any-hover: hover )
+            &:hover
+               box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset
+    &__image
+        height: 70px
+        display: flex
+        align-items: flex-end
+        &:not(:last-child)
+            @include adaptiv-value('margin-bottom', 45, 25, 1)
+    &__subtitle 
+        font-family: Circular Std Bold, sans-serif
+        font-size: 28px
+        line-height: 125%
+        text-align: center

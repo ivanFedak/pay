@@ -1,0 +1,69 @@
+.support 
+    position: relative
+    @include adaptiv-value('padding-top', 100, 50, 1)
+    @include adaptiv-value('padding-bottom', 100, 50, 1)
+    &__container 
+    &__wrapper
+        z-index: 2
+        display: flex
+        justify-content: space-between 
+        @media (max-width: 650px) //Less 650
+            flex-direction: column
+    &__body 
+        flex: 1 1 auto
+        padding-right: 20px
+        @media (max-width: 650px)//Less 650
+            padding: 0 0 20px 0
+    &__title 
+        font-family: Circular Std Black, sans-serif 
+        @include adaptiv-value('font-size', 52, 30, 1)
+        line-height: 126.9%
+        color: #FFFFFF
+        &:not(:last-child)
+            @include adaptiv-value('margin-bottom', 25, 20, 1)
+    &__text 
+        font-family: Circular Std Book, sans-serif 
+        font-size: 18px
+        line-height: 127%
+        color: #FFFFFF
+    &__btns 
+        display: flex
+        align-items: flex-start
+    &__btn 
+        display: flex
+        align-items: center
+        text-align: center
+        min-width: 195px
+        padding: 18px 30px
+        background: #FFFFFF
+        box-shadow: 0px 10px 25px rgba(99, 45, 219, 0.4)
+        border-radius: 10px
+        transition: all 0.3s ease 0s
+        
+        font-family: Circular Std Medium, sans-serif
+        font-size: 16px
+        line-height: 125%
+        color: #FE6C9D
+        @media (any-hover: hover )
+            &:hover
+                background: #FE6C9D
+                color: #FFFFFF
+                .support__icon
+                    &::before
+                        color: #ffffff
+        @media (max-width: 650px)//Less 650
+            flex: 0 1 100%
+        
+    &__icon
+        margin-right: 20px
+        &::before
+            font-size: 24px
+            color: #FE6c9d
+
+    &__image 
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        width: 100%
+        height: 100%

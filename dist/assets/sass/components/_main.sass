@@ -1,0 +1,119 @@
+.main 
+    padding-top: 170px
+    @include adaptiv-value('padding-bottom', 100, 50, 1)
+    background: linear-gradient(90deg, #FFEEFE 0%, #F5F7FF 51.56%, #E4F2FE 100%)
+    &__container
+    &__wrapper
+        display: flex
+        @media (max-width: 550px) //Less 550
+            flex-direction: column-reverse
+           
+    &__body
+        flex: 0 1 50%
+        @include adaptiv-value('padding-right', 80, 20, 1)
+        display: flex
+        flex-direction: column
+        @media (max-width: $md3 + px) //Less 768
+            flex: 1 1 auto
+            padding-right: 0
+        @media (max-width: 550px) //Less 550
+            padding-top: 10px
+
+    &__title
+        font-family: Circular Std Black, sans-serif
+        font-weight: 900
+        @include adaptiv-value('font-size', 95, 14, 1)
+        line-height: 115%
+        &:not(:last-child)
+            @include adaptiv-value('margin-bottom', 25, 15, 1)
+        @media (max-width: $md4 + px)//Less 479
+           @include adaptiv-value('font-size', 48, 20, 1)
+    &__text
+        font-family: Circular Std Book, sans-serif
+        font-weight: 450
+        @include adaptiv-value('font-size', 18, 16, 1)
+        line-height: 156%
+        color: $gray
+        &:not(:last-child)
+            @include adaptiv-value('margin-bottom', 50, 20, 1)
+    &__btns
+        display: flex
+        @media (max-width: $md2 + px)//Less 992
+           flex-direction: column
+        @media (max-width: $md3 + px) //Less 768
+           flex-direction: row
+        @media (max-width: 550px) //Less 550
+            flex-direction: column
+           
+    &__btn
+        background: #FFFFFF
+        box-shadow: 0px 10px 25px rgba(210, 177, 207, 0.3)
+        border-radius: 10px
+
+        display: inline-flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        text-align: center
+        min-width: 200px
+        padding: 20px 30px
+        transition: all 0.3s ease 0s
+        
+
+        font-weight: 500
+        font-size: 16px
+        line-height: 125%
+        text-align: center
+        color: #9166F0
+        &:not(:last-child)
+            @include adaptiv-value('margin-right', 40, 25, 1)
+        @media (max-width: $md2 + px)//Less 992
+           &:not(:last-child)
+               margin: 0 0 20px 0
+        @media (max-width: $md3 + px) //Less 768
+            flex: 1 1 auto
+            &:not(:last-child)
+                margin: 0 15px 0 0
+        @media (max-width: 550px) //Less 550
+            &:not(:last-child)
+                margin: 0 0 10px 0
+        @media (any-hover: hover )
+            &:hover
+                background: #9166F0
+                color: #fff
+
+    &__player
+        display: flex
+        align-items: center
+    &__play
+        padding: 20px
+        background: none
+        border: 2px solid #9166F0
+        border-radius: 50%
+        transition: all 0.3s ease 0s
+        &::before
+            color: #9166F0
+        &:not(:last-child)
+            margin-right: 20px
+        @media (any-hover: hover )
+            &:hover
+                background: #9166F0
+                &::before
+                    color: #fff
+            
+    &__see
+        font-weight: 500
+        font-size: 16px
+        line-height: 125%
+        @media (max-width: $md2 + px)//Less 992
+            @include adaptiv-value('font-size', 22, 15, 1)
+    &__image
+        flex: 0 1 50%
+        padding: 0 0 39% 0
+        @media (max-width: 900px) //Less 900
+           height: 200px
+        @media (max-width: $md3 + px) //Less 768
+           display: none
+        @media (max-width: 550px) //Less 550
+            padding: 0 0 87% 0
+            display: block

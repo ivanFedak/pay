@@ -1,0 +1,91 @@
+.work 
+    @include adaptiv-value('padding-top', 120, 40, 1)
+    @include adaptiv-value('padding-bottom', 120, 40, 1)
+
+    &__container 
+    &__wrapper 
+        display: flex
+        align-items: center
+        @media (max-width: $md3 + px) //Less 768
+           flex-direction: column
+    &__image 
+        position: relative
+        flex: 0 1 50%
+        @media (max-width: $md2 + px)//Less 992
+           flex: 0 1 32%
+        @media (max-width: $md3 + px) //Less 768
+           width: 50%
+           margin-bottom: 20px
+        img
+            height: 100%
+            width: 100%
+        &::before
+            content: ''
+            position: absolute
+            @include adaptiv-value('width', 500, 200, 1)
+            @include adaptiv-value('height', 500, 200, 1)
+            background: linear-gradient(180deg, #F5B9FF 29.23%, #C4D9FF 100%);
+            bottom: 4px
+            left: 57.2%
+            z-index: -1 
+            transform: translateX(-50%)
+            border-radius: 50%
+            @media (max-width: $md2 + px)//Less 992
+               bottom: 6.1px
+    &__body 
+        @include adaptiv-value('padding-left', 100, 20, 1)
+        flex: 0 1 50%
+        @media (max-width: $md2 + px)//Less 992
+           flex: 0 1 68%
+        @media (max-width: $md3 + px)//Less769
+           padding: 0 0 0 0
+    &__title
+        text-align: left
+    &__descr
+        text-align: left
+        color: $mainColor
+    &__list 
+        @include adaptiv-value('padding-top', 60, 20, 1)
+        display: flex
+        flex-direction: column
+    &__item 
+        display: flex
+        align-items: flex-start
+        &:not(:last-child)
+            @include adaptiv-value('margin-bottom', 55, 20, 1)
+        @media (max-width: $md4 + px)//Less 479
+           flex-direction: column
+           align-items: center
+           text-align: center
+    &__icon 
+        margin-right: 25px
+        background: #FE6C9D
+        padding: 17px
+        border-radius: 100%
+        &::before
+            font-size: 25px
+            color: #fff
+        @media (max-width: $md4 + px)//Less 479
+           margin: 0 0 0 0
+           @include adaptiv-value('margin-bottom', 15, 10, 1)
+    &__block 
+        display: flex
+        flex-direction: column
+    &__subtitle 
+        font-family: Circular Std Bold, sans-serif
+        font-weight: bold
+        font-size: 24px
+        line-height: 125%
+        color: #000000
+        &:not(:last-child)
+            @include adaptiv-value('margin-bottom', 10, 5, 1)
+        @media (max-width: $md3 + px) //Less 768
+           @include adaptiv-value('font-size', 24, 19, 1)
+    &__text
+        font-family: Circular Std Book, sans-serif
+        font-weight: 450
+        font-size: 18px
+        line-height: 156%
+        color: #646679
+        @media (max-width: $md3 + px) //Less 768
+           @include adaptiv-value('font-size', 18, 14, 1)

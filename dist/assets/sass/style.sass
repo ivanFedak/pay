@@ -1,0 +1,192 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('http://fonts.cdnfonts.com/css/circular-std-book?styles=16171,16173,16169,16167&display=swap');
+
+
+//-----fonts--------//
+
+
+// font-family: Circular Std Book, sans-serif //450
+// font-family: Circular Std Medium, sans-serif // 500
+// font-family: Circular Std Bold, sans-serif // 700
+// font-family: Circular Std Black, sans-serif // 900
+
+
+
+//-----fonts--------//
+
+// font-family: Roboto, sans-serif (300, 500, 700, 900)
+
+//-----fonts--------//
+
+
+
+//ctr + shift + p
+
+//&display=swap
+
+
+
+@import mixins
+@import 'icons'
+// $maxWidth: 1440
+
+$maxWidthContainer: 1410 + 30
+//+ 30px
+  
+  
+$md1: $maxWidthContainer + 12
+$md2: 991.98 
+$md3: 767.98
+$md4: 479.98
+
+
+$mainColor: #161828 
+$gray: #646679
+
+@import 'ui' 
+
+
+
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  font-family: Circular Std Medium, sans-serif
+  font-size: 16px
+  color: $mainColor
+
+
+html,body
+  height: 100%
+  // background: #fff
+
+
+
+  
+._container
+  max-width: $maxWidthContainer + px
+  padding: 0 15px
+  margin: 0 auto
+
+.wrapper 
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+  
+.page 
+	flex: 1 1 auto;
+
+button
+  border: none
+  cursor: pointer
+  outline: none
+
+ul li
+  list-style: none
+
+a
+  text-decoration: none
+  outline: none
+
+input
+  outline: none
+  border: 1px solid #ccc
+
+textarea
+  outline: none
+  resize: none
+  border: 1px solid #ccc
+
+
+//-----------Componets import-----------------\\
+
+@import './modules/burger' 
+@import './components/header'
+@import './components/main'
+@import './components/choose'
+@import './components/work'
+@import './components/brands'
+@import './components/app'
+@import './components/features'
+@import './components/support'
+@import './components/footer'
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+//----------- Hacks  -----------------\\
+
+  //Line height 24  font-size 14    24/14 * 100% = 170%-line-height
+
+      // &__image 
+      //   display: block
+      //   padding: 0 0 140/230 * 100% 0
+      //   //висота картинки 140 ширина блока 230
+
+  //flex 1 1 auto; //to the bottom or to the side(прибити)
+
+  
+//When body + img on 1 screen //First way
+
+  //.wrapper
+    // display: flex
+    // align-items: flex-start !!!!
+
+  //&__body
+      // @include adaptiv-value('padding-left', 100, 20, 1)
+      // flex: 0 1 50%
+  // &__image (_ibg)
+  //     position: relative
+  //     flex: 0 1 50%
+  //     padding: 0 0 52% 0
+
+
+
+
+//When body + img on 1 screen //Second way
+
+  //.wrapper
+    // display: flex
+    // align-items: flex-start !!!!
+
+    //&__body
+        // @include adaptiv-value('padding-left', 100, 20, 1)
+        // flex: 0 1 50%
+
+    // &__image (!!not!! _ibg)
+    //   position: relative
+    //   flex: 0 1 32%
+    //   img
+    //       height: 100%
+    //       width: 100%
+
+
+//When body + img on 1 screen //Second way
+  
+    // &__wrapper
+    //   display: flex
+    //   align-items: center
+    //   @media (max-width: $md3 + px) //Less 768
+    //      flex-direction: column-reverse
+          // &__body
+          //   flex: 0 1 50%
+          //   padding-right: 20px
+          // &__image
+          //   @include adaptiv-value('padding-left', 120, 0, 1)
+          //   img
+          //       width: 100%
+          //       height: 100%

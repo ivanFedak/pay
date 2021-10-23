@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'icons';
+  src:
+    url('fonts/icons.ttf?2v8rzc') format('truetype'),
+    url('fonts/icons.woff?2v8rzc') format('woff'),
+    url('fonts/icons.svg?2v8rzc#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="_icon-"], [class*=" _icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-secure:before {
+  content: "\e907";
+}
+._icon-apple:before {
+  content: "\e900";
+}
+._icon-bank:before {
+  content: "\e901";
+}
+._icon-google:before {
+  content: "\e902";
+}
+._icon-internet:before {
+  content: "\e903";
+}
+._icon-money:before {
+  content: "\e904";
+}
+._icon-phone:before {
+  content: "\e905";
+}
+._icon-play:before {
+  content: "\e906";
+}
