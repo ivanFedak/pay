@@ -52,22 +52,29 @@
         @media (max-width: $md4 + px)//Less 479
            &:not(:last-child)
                margin: 0 0 10px 0
-
+        &_menu
+            display: none
+            @media (max-width: $md2 + px)//Less 992
+                display: flex
+                background: #7c4ede
+                z-index: 11
 
 .menu 
-    &__icon
+    &__icon 
         display: none
     &__body
         @media (max-width: $md2 + px)//Less 992
            position: fixed
-           z-index: 30  
+           z-index: 10  
            left: -100%
            top: 0
-           width: 100%
+           width: 50%
            height: 100%
-           background: #d2d2d2a8
+           background: #9c7edcbd
            padding-top: 100px
            overflow: auto
+
+           transition: all 0.3s ease 0s
     &__list
         display: flex
         justify-content: center
@@ -84,7 +91,11 @@
         @include adaptiv-value('padding-right', 40, 1, 1)
         @media (max-width: $md2 + px)//Less 992
            &:not(:last-child)
-               @include adaptiv-value('margin-bottom', 25, 20, 1)
+               margin-bottom: 5px
+        @media (max-width: $md2 + px)//Less 992
+            display: flex
+            align-items: center
+            justify-content: center
     &__link
         font-family: Circular Std Book, sans-serif
         font-size: 18px
@@ -93,6 +104,8 @@
             font-family: Circular Std Bold, sans-serif 
             color: #ffffff
             font-size: 25px
-            background: #9166F0
-            padding: 10px
+            padding: 5px
             border-radius: 5px
+
+.menu__body_active
+    left: 0
